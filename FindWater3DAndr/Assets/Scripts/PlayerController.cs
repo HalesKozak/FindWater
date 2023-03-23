@@ -4,34 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
-    public Transform player;
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private FloatingJoystick  _floatingJoystick;
+    [SerializeField] private Animator _animator;
 
-    public Joystick joystick;
-
-    private Animator animator;
+    [SerializeField] private float _moveSpeed;
 
     //public AudioSource attackClip;
     //public AudioSource drinkingClip;
 
-    public float speed = 3;
-
-    private Vector3 velocity;
-
-
-    private void Start()
+    private void FixedUpdate()
     {
-        animator = GetComponent<Animator>();
-    }
-    private void Update()
-    {
-        float x = joystick.Horizontal;
-        float z = joystick.Vertical;
-
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
-        controller.Move(velocity * Time.deltaTime);
+        _rigidbody.velocity = new Vector3(_floatingJoystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _floatingJoystick.Vertical * _moveSpeed);
       
+        if(_floatingJoystick.Horizontal !=0 || _floatingJoystick.Vertical != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+        }
+
         //if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         //{
 
@@ -60,8 +50,8 @@ public class PlayerController : MonoBehaviour
         //else animator.SetFloat("Side", 10);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    //private void OnTriggerEnter(Collider other)
+    //{
        
-    }
+    //}
 }
