@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         _rigidbody.velocity = new Vector3(_fixedJoystick.Horizontal * _moveSpeed, _rigidbody.velocity.y, _fixedJoystick.Vertical * _moveSpeed);
 
-        if (_fixedJoystick.Horizontal !=0 || _fixedJoystick.Vertical != 0)
+        if (_fixedJoystick.Horizontal != 0 || _fixedJoystick.Vertical != 0)
         {
             transform.rotation = Quaternion.LookRotation(_rigidbody.velocity);
             _animator.SetBool("IsWalking", true);
