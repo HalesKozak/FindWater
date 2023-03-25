@@ -11,6 +11,7 @@ public class ItemSObject : ScriptableObject
     public GameObject itemPrefab;
 
     [Header("Characteristics")]
+
     public float moveSpeedCount;
     public float healthCount;
     public float waterCount;

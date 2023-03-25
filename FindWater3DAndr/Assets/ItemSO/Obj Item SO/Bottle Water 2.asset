@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Bottle Water 2
   m_EditorClassIdentifier: 
   itemType: 0
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 5191443691460487651, guid: 081e1519c7b44b6468afb28bd01a8566,
+    type: 3}
   moveSpeedCount: 0
   healthCount: 0
   waterCount: 25

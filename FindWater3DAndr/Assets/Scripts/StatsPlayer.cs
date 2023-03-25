@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class StatsPlayer : MonoBehaviour
 {
-    [SerializeField] private float heathPoint;
+    [SerializeField] public float heathPoint;
 
     public Slider sliderHealthPoint;
 
-    private float damagePoint = 5;
+    private float defaultDamagePoint = 5;
 
     private void Start()
     {
@@ -21,8 +21,15 @@ public class StatsPlayer : MonoBehaviour
         sliderHealthPoint.value = heathPoint;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int a)
     {
-        heathPoint -= damagePoint * Time.deltaTime;
+        if (a == 1)
+        {
+            heathPoint -= defaultDamagePoint;
+        }
+        else
+        {
+            heathPoint -= defaultDamagePoint * Time.deltaTime;
+        }
     }
 }

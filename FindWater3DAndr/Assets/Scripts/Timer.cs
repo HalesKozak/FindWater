@@ -7,27 +7,41 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private StatsPlayer _statsPlayer;
 
-    public float timeStart;
+    public float waterStartCount;
+    private float waterCurrentCount;
 
     public Slider sliderWater;
 
     private void Start()
     {
-        sliderWater.maxValue = timeStart;
+        sliderWater.maxValue = waterStartCount;
+        waterCurrentCount = waterStartCount;
     }
 
     private void Update()
     {
-        if(timeStart>0)
+        if(waterCurrentCount > 0)
         {
-            timeStart -= Time.deltaTime;
+            waterCurrentCount -= Time.deltaTime;
 
-            sliderWater.value = timeStart;
+            sliderWater.value = waterCurrentCount;
         }
         else
         {
-            _statsPlayer.TakeDamage();
+            _statsPlayer.TakeDamage(2);
         }
        
+    }
+
+    public void AddWaterCount(float count)
+    {
+        if((waterCurrentCount += count) >= waterStartCount)
+        {
+            waterCurrentCount = waterStartCount;
+        }
+        else
+        {
+            waterCurrentCount += count;
+        }
     }
 }

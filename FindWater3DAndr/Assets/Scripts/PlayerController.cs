@@ -5,13 +5,16 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private FixedJoystick  _fixedJoystick;
     [SerializeField] private Animator _animator;
+
+    [SerializeField] private FixedJoystick _fixedJoystick;
+    [SerializeField] private StatsPlayer _statsPlayer;
+    [SerializeField] private Timer _timer;
 
     [SerializeField] private float _moveSpeed;
 
-    //public AudioSource attackClip;
-    //public AudioSource drinkingClip;
+    public AudioSource pickUpItemAS;
+    public AudioSource pickUpBonusAS;
 
     private void FixedUpdate()
     {
@@ -28,8 +31,43 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-       
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<Item>(out var itemScript) == true)
+        {
+           if(itemScript.item.itemType == ItemType.BottleWater)
+           {
+                _timer.AddWaterCount(itemScript.item.waterCount);
+                pickUpItemAS.Play();
+
+                Destroy(other.gameObject);
+           }
+           else
+           {
+                if (itemScript.item.moveSpeedCount != 0)
+                {
+                    StartCoroutine(BaffMoveSpeed(itemScript.item.moveSpeedCount));
+                }
+                else
+                {
+                    _statsPlayer.heathPoint += itemScript.item.healthCount;
+                }
+
+                pickUpBonusAS.Play();
+
+                Destroy(other.gameObject);
+            }
+        }
+        else
+        {
+            _statsPlayer.TakeDamage(1);
+        }
+    }
+
+    IEnumerator BaffMoveSpeed(float bonusMoveSpeed)
+    {
+        _moveSpeed += bonusMoveSpeed;
+        yield return new WaitForSeconds(10f);
+        _moveSpeed -= bonusMoveSpeed;
+    }
 }
