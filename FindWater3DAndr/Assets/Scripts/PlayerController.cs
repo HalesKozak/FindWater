@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public AudioSource pickUpItemAS;
     public AudioSource pickUpBonusAS;
 
+    public ParticleSystem[] particlesPlayer;
+
     [SerializeField] private float _moveSpeed;
 
     private void FixedUpdate()
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
                 pickUpBonusAS.Play();
             }
+            particlesPlayer[itemScript.item.indexParticlePlayer].Play();
             _spawnPrefab.SpawnObj(itemScript.item.indexPrefab);
             Destroy(other.gameObject);
         }

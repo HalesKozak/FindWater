@@ -13,6 +13,7 @@ public class ItemSObject : ScriptableObject
     [Header("Characteristics")]
 
     public int indexPrefab;
+    public int indexParticlePlayer;
 
     public float moveSpeedCount;
     public float healthCount;

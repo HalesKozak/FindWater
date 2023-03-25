@@ -15,6 +15,7 @@ MonoBehaviour:
   itemType: 1
   itemPrefab: {fileID: 0}
   indexPrefab: 5
+  indexParticlePlayer: 1
   moveSpeedCount: -2
   healthCount: 0
   waterCount: 0

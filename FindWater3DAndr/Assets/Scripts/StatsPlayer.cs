@@ -7,6 +7,8 @@ public class StatsPlayer : MonoBehaviour
 {
     [SerializeField] public float heathPoint;
 
+    public ParticleSystem takeDamageParticle;
+
     public Slider sliderHealthPoint;
 
     private float defaultDamagePoint = 5;
@@ -30,6 +32,11 @@ public class StatsPlayer : MonoBehaviour
         else
         {
             heathPoint -= defaultDamagePoint * Time.deltaTime;
+        }
+
+        if (takeDamageParticle.isPlaying == false)
+        {
+            takeDamageParticle.Play();
         }
     }
 }

@@ -15,6 +15,8 @@ MonoBehaviour:
   itemType: 0
   itemPrefab: {fileID: 4912132770016588873, guid: 6268d5f38244289499b8e37f1ea856c8,
     type: 3}
+  indexPrefab: 0
+  indexParticlePlayer: 3
   moveSpeedCount: 0
   healthCount: 0
   waterCount: 50
