@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody _rigidbody;
-    [SerializeField] private Animator _animator;
-
+    [Header("Scripts")]
     [SerializeField] private FixedJoystick _fixedJoystick;
     [SerializeField] private StatsPlayer _statsPlayer;
     [SerializeField] private Timer _timer;
+    [SerializeField] private SpawnPrefab _spawnPrefab;
 
-    [SerializeField] private float _moveSpeed;
+    [Header("Components")]
+    [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private Animator _animator;
 
+    [Header("AudioSources")]
     public AudioSource pickUpItemAS;
     public AudioSource pickUpBonusAS;
+
+    [SerializeField] private float _moveSpeed;
 
     private void FixedUpdate()
     {
@@ -38,9 +42,8 @@ public class PlayerController : MonoBehaviour
            if(itemScript.item.itemType == ItemType.BottleWater)
            {
                 _timer.AddWaterCount(itemScript.item.waterCount);
-                pickUpItemAS.Play();
 
-                Destroy(other.gameObject);
+                pickUpItemAS.Play();
            }
            else
            {
@@ -54,9 +57,9 @@ public class PlayerController : MonoBehaviour
                 }
 
                 pickUpBonusAS.Play();
-
-                Destroy(other.gameObject);
             }
+            _spawnPrefab.SpawnObj(itemScript.item.indexPrefab);
+            Destroy(other.gameObject);
         }
         else
         {

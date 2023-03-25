@@ -137,10 +137,10 @@ GameObject:
   - component: {fileID: 9763905}
   m_Layer: 0
   m_Name: CactusBox (18)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &9763904
 Transform:
@@ -411,10 +411,10 @@ GameObject:
   - component: {fileID: 164716670}
   m_Layer: 0
   m_Name: CactusBox (4)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &164716669
 Transform:
@@ -624,10 +624,10 @@ GameObject:
   - component: {fileID: 217745758}
   m_Layer: 0
   m_Name: CactusBox (21)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &217745757
 Transform:
@@ -811,10 +811,10 @@ GameObject:
   - component: {fileID: 333404441}
   m_Layer: 0
   m_Name: CactusBox (2)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &333404440
 Transform:
@@ -858,10 +858,10 @@ GameObject:
   - component: {fileID: 360101815}
   m_Layer: 0
   m_Name: CactusBox (22)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &360101814
 Transform:
@@ -958,7 +958,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &372747472
 Transform:
@@ -1055,7 +1055,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &380341593
 Transform:
@@ -1158,10 +1158,10 @@ GameObject:
   - component: {fileID: 418225542}
   m_Layer: 0
   m_Name: CactusBox (19)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &418225541
 Transform:
@@ -1482,6 +1482,7 @@ GameObject:
   - component: {fileID: 532806393}
   - component: {fileID: 532806392}
   - component: {fileID: 532806394}
+  - component: {fileID: 532806395}
   m_Layer: 0
   m_Name: Game Mechanism
   m_TagString: Untagged
@@ -1533,6 +1534,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heathPoint: 100
   sliderHealthPoint: {fileID: 253284898}
+--- !u!114 &532806395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532806391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d1f996a1b0f7e459594cf607e54bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab:
+  - {fileID: 4912132770016588873, guid: 6268d5f38244289499b8e37f1ea856c8, type: 3}
+  - {fileID: 5191443691460487651, guid: 081e1519c7b44b6468afb28bd01a8566, type: 3}
+  - {fileID: 1250531450507716971, guid: 20b90dce14966154b96693cfcc07e7b3, type: 3}
+  - {fileID: 2122621869399955723, guid: 3e832abd2ad0a0a49b38935435e7c968, type: 3}
+  - {fileID: 3233156501365395033, guid: a4fd9cddd6be8634dad4d2d97cdb820b, type: 3}
+  - {fileID: 8894050959975290051, guid: 3c29499b6cb489b498f1778d4cf955b9, type: 3}
+  minPosition: {x: 8.5689745, y: 2, z: 3.6798162}
+  maxPosition: {x: 58.241856, y: 2, z: 53.869595}
 --- !u!1 &548098435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,10 +1569,10 @@ GameObject:
   - component: {fileID: 548098437}
   m_Layer: 0
   m_Name: CactusBox (10)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &548098436
 Transform:
@@ -1712,10 +1734,10 @@ GameObject:
   - component: {fileID: 597085977}
   m_Layer: 0
   m_Name: CactusBox (8)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &597085976
 Transform:
@@ -1807,10 +1829,10 @@ GameObject:
   - component: {fileID: 617009070}
   m_Layer: 0
   m_Name: CactusBox (3)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &617009069
 Transform:
@@ -1854,10 +1876,10 @@ GameObject:
   - component: {fileID: 629617595}
   m_Layer: 0
   m_Name: CactusBox (14)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &629617594
 Transform:
@@ -1951,10 +1973,10 @@ GameObject:
   - component: {fileID: 664181199}
   m_Layer: 0
   m_Name: CactusBox (13)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &664181198
 Transform:
@@ -2052,7 +2074,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!65 &676588681
 BoxCollider:
@@ -2253,10 +2275,10 @@ GameObject:
   - component: {fileID: 755663885}
   m_Layer: 0
   m_Name: CactusBox (23)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &755663884
 Transform:
@@ -2482,7 +2504,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &798054784
 Transform:
@@ -2583,10 +2605,10 @@ GameObject:
   - component: {fileID: 864548206}
   m_Layer: 0
   m_Name: CactusBox
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &864548205
 Transform:
@@ -2630,10 +2652,10 @@ GameObject:
   - component: {fileID: 870382764}
   m_Layer: 0
   m_Name: CactusBox (9)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &870382763
 Transform:
@@ -2762,10 +2784,10 @@ GameObject:
   - component: {fileID: 885319328}
   m_Layer: 0
   m_Name: CactusBox (5)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &885319327
 Transform:
@@ -2849,7 +2871,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &926329098
 Transform:
@@ -3041,10 +3063,10 @@ GameObject:
   - component: {fileID: 1009624902}
   m_Layer: 0
   m_Name: CactusBox (11)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1009624901
 Transform:
@@ -3267,10 +3289,10 @@ GameObject:
   - component: {fileID: 1040566412}
   m_Layer: 0
   m_Name: CactusBox (23)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1040566411
 Transform:
@@ -3362,10 +3384,10 @@ GameObject:
   - component: {fileID: 1075383369}
   m_Layer: 0
   m_Name: CactusBox (1)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1075383368
 Transform:
@@ -3409,10 +3431,10 @@ GameObject:
   - component: {fileID: 1118245194}
   m_Layer: 0
   m_Name: CactusBox (15)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1118245193
 Transform:
@@ -3582,10 +3604,10 @@ GameObject:
   - component: {fileID: 1178109467}
   m_Layer: 0
   m_Name: CactusBox (21)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1178109466
 Transform:
@@ -3679,10 +3701,10 @@ GameObject:
   - component: {fileID: 1182450580}
   m_Layer: 0
   m_Name: CactusBox (12)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1182450579
 Transform:
@@ -3779,7 +3801,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1205517317
 Transform:
@@ -3882,10 +3904,10 @@ GameObject:
   - component: {fileID: 1256975526}
   m_Layer: 0
   m_Name: CactusBox (16)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1256975525
 Transform:
@@ -3979,10 +4001,10 @@ GameObject:
   - component: {fileID: 1307433738}
   m_Layer: 0
   m_Name: CactusBox (20)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1307433737
 Transform:
@@ -4244,10 +4266,10 @@ GameObject:
   - component: {fileID: 1484530970}
   m_Layer: 0
   m_Name: CactusBox (17)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1484530969
 Transform:
@@ -4341,10 +4363,10 @@ GameObject:
   - component: {fileID: 1496857399}
   m_Layer: 0
   m_Name: CactusBox (22)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1496857398
 Transform:
@@ -4539,10 +4561,10 @@ GameObject:
   - component: {fileID: 1556823105}
   m_Layer: 0
   m_Name: CactusBox (16)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1556823104
 Transform:
@@ -4636,10 +4658,10 @@ GameObject:
   - component: {fileID: 1564216233}
   m_Layer: 0
   m_Name: CactusBox (19)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1564216232
 Transform:
@@ -4733,10 +4755,10 @@ GameObject:
   - component: {fileID: 1631479670}
   m_Layer: 0
   m_Name: CactusBox (20)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1631479669
 Transform:
@@ -4833,7 +4855,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1689599084
 Transform:
@@ -5130,10 +5152,10 @@ GameObject:
   - component: {fileID: 1796384746}
   m_Layer: 0
   m_Name: CactusBox (7)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1796384745
 Transform:
@@ -5230,10 +5252,10 @@ GameObject:
   - component: {fileID: 1868951720}
   m_Layer: 0
   m_Name: CactusBox (6)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1868951719
 Transform:
@@ -5353,10 +5375,10 @@ GameObject:
   - component: {fileID: 2102903980}
   m_Layer: 0
   m_Name: CactusBox (18)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &2102903979
 Transform:
@@ -5562,10 +5584,10 @@ GameObject:
   - component: {fileID: 2145226073}
   m_Layer: 0
   m_Name: CactusBox (17)
-  m_TagString: Untagged
+  m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &2145226072
 Transform:
@@ -6065,14 +6087,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d228b0c10b805c647b4d23b8896d23c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 95161444476305292}
-  _animator: {fileID: 95161444476305290}
   _fixedJoystick: {fileID: 1814075750}
   _statsPlayer: {fileID: 532806394}
   _timer: {fileID: 532806392}
+  _spawnPrefab: {fileID: 532806395}
+  _rigidbody: {fileID: 95161444476305292}
+  _animator: {fileID: 95161444476305290}
+  pickUpItemAS: {fileID: 784119568}
+  pickUpBonusAS: {fileID: 1710475564}
   _moveSpeed: 3
-  pickUpItemAS: {fileID: 0}
-  pickUpBonusAS: {fileID: 0}
 --- !u!54 &95161444476305292
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6202,7 +6225,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!4 &1151388028914124736
 Transform:
@@ -6413,7 +6436,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 30
   m_IsActive: 1
 --- !u!64 &8164078559003825404
 MeshCollider:

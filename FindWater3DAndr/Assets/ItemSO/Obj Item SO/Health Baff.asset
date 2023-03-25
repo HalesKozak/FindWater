@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemPrefab: {fileID: 0}
+  indexPrefab: 3
   moveSpeedCount: 0
   healthCount: 10
   waterCount: 0
