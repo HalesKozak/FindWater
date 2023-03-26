@@ -17,6 +17,8 @@ public class StatsProgressGame : MonoBehaviour
     private void Start()
     {
         lifeTimeCount = 0;
+        bottlesPickUpCount = 0;
+        bonusPickUpCount = 0;
     }
 
     private void Update()
@@ -34,5 +36,6 @@ public class StatsProgressGame : MonoBehaviour
     public void ToMenu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 }

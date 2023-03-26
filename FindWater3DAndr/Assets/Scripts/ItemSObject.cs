@@ -18,4 +18,12 @@ public class ItemSObject : ScriptableObject
     public float moveSpeedCount;
     public float healthCount;
     public float waterCount;
+
+    [Header("ModeCounts")]
+    public float startCountHealthPoint;
+    public float startCountWaterPoint;
+
+    public int startCountBottles;
+    public int startCountBonus;
+
 }

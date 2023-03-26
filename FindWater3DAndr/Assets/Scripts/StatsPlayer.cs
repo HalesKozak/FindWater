@@ -17,7 +17,7 @@ public class StatsPlayer : MonoBehaviour
 
     private float defaultDamagePoint = 5;
 
-    private void Start()
+    public void SliderHealthPointCount()
     {
         sliderHealthPoint.maxValue = heathPoint;
     }

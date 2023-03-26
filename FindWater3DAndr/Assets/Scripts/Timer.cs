@@ -16,10 +16,12 @@ public class Timer : MonoBehaviour
 
     public AudioSource pauseAS;
 
-    private void Start()
+    public void StartTimer()
     {
         sliderWater.maxValue = waterStartCount;
         waterCurrentCount = waterStartCount;
+
+        pauseText.SetActive(false);
     }
 
     private void Update()
