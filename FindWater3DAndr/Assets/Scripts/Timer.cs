@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
 
     public GameObject pauseText;
 
+    public AudioSource pauseAS;
+
     private void Start()
     {
         sliderWater.maxValue = waterStartCount;
@@ -58,6 +60,7 @@ public class Timer : MonoBehaviour
             Time.timeScale = 0;
         }
 
+        pauseAS.Play();
         pauseText.SetActive(!pauseText.activeSelf);
     }
 }

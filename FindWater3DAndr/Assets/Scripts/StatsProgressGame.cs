@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StatsProgressGame : MonoBehaviour
 {
@@ -25,8 +26,13 @@ public class StatsProgressGame : MonoBehaviour
 
     public void ShowStatsProgressGame()
     {
-        statsProgressGameText[0].text = "Ви прожили на цьому світі :" + string.Format("{0:F1}", lifeTimeCount / 60) + " хв";
-        statsProgressGameText[1].text = "Піднято пляшок з водою :" + bottlesPickUpCount;
-        statsProgressGameText[2].text = "Піднято бонусів :" +  bonusPickUpCount;
+        statsProgressGameText[0].text = "Ви прожили на цьому світі : " + string.Format("{0:F1}", lifeTimeCount / 60) + " хв";
+        statsProgressGameText[1].text = "Піднято пляшок з водою : " + bottlesPickUpCount;
+        statsProgressGameText[2].text = "Піднято бонусів : " +  bonusPickUpCount;
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
