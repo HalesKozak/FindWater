@@ -7,9 +7,13 @@ public class StatsPlayer : MonoBehaviour
 {
     [SerializeField] public float heathPoint;
 
-    public ParticleSystem takeDamageParticle;
+    [SerializeField] private Animator _animator;
 
     public Slider sliderHealthPoint;
+
+    public ParticleSystem takeDamageParticle;
+
+    public AudioSource takeDamageAS;
 
     private float defaultDamagePoint = 5;
 
@@ -20,11 +24,17 @@ public class StatsPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (heathPoint <= 0)
+        {
+            _animator.SetBool("IsDie", true);
+        }
         sliderHealthPoint.value = heathPoint;
     }
 
     public void TakeDamage(int a)
     {
+        takeDamageAS.Play();
+
         if (a == 1)
         {
             heathPoint -= defaultDamagePoint;
@@ -34,7 +44,7 @@ public class StatsPlayer : MonoBehaviour
             heathPoint -= defaultDamagePoint * Time.deltaTime;
         }
 
-        if (takeDamageParticle.isPlaying == false)
+        if (takeDamageParticle.isPlaying == false && heathPoint>=0)
         {
             takeDamageParticle.Play();
         }

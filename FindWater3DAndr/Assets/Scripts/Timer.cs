@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
 
     public Slider sliderWater;
 
+    public GameObject pauseText;
+
     private void Start()
     {
         sliderWater.maxValue = waterStartCount;
@@ -43,5 +45,19 @@ public class Timer : MonoBehaviour
         {
             waterCurrentCount += count;
         }
+    }
+
+    public void PauseGame()
+    {
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
+        else
+        {
+            Time.timeScale = 0;
+        }
+
+        pauseText.SetActive(!pauseText.activeSelf);
     }
 }
