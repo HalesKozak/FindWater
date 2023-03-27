@@ -8,11 +8,12 @@ public class StatsProgressGame : MonoBehaviour
 {
     [SerializeField] private Text[] statsProgressGameText;
 
+    [SerializeField] private ItemSObject countsGame;
+
     private float lifeTimeCount;
 
     public int bottlesPickUpCount;
     public int bonusPickUpCount;
-
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class StatsProgressGame : MonoBehaviour
         statsProgressGameText[0].text = "Ви прожили на цьому світі : " + string.Format("{0:F1}", lifeTimeCount / 60) + " хв";
         statsProgressGameText[1].text = "Піднято пляшок з водою : " + bottlesPickUpCount;
         statsProgressGameText[2].text = "Піднято бонусів : " +  bonusPickUpCount;
+        statsProgressGameText[2].text = "Рівень гри : " + countsGame.gameMode;
     }
 
     public void ToMenu()

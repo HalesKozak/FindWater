@@ -15,10 +15,11 @@ public class StatsPlayer : MonoBehaviour
 
     public AudioSource takeDamageAS;
 
-    private float defaultDamagePoint = 5;
-
+    public float maxHeathPoint;
+    public float cactusDamagePoint;
     public void SliderHealthPointCount()
     {
+        heathPoint = maxHeathPoint;
         sliderHealthPoint.maxValue = heathPoint;
     }
 
@@ -37,11 +38,11 @@ public class StatsPlayer : MonoBehaviour
 
         if (a == 1)
         {
-            heathPoint -= defaultDamagePoint;
+            heathPoint -= cactusDamagePoint;
         }
         else
         {
-            heathPoint -= defaultDamagePoint * Time.deltaTime;
+            heathPoint -= cactusDamagePoint * Time.deltaTime;
         }
 
         if (takeDamageParticle.isPlaying == false && heathPoint>=0)

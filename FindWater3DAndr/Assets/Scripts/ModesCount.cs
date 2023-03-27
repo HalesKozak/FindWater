@@ -11,7 +11,9 @@ public class ModesCount : MonoBehaviour
         countsGame.startCountWaterPoint =100;
         countsGame.startCountBottles =3;
         countsGame.startCountBonus =3;
-    }
+        countsGame.startÑactusDamagePoint = 10;
+        countsGame.gameMode = "Ëåãêèé";
+   }
 
     public void MiddleMode()
     {
@@ -19,6 +21,8 @@ public class ModesCount : MonoBehaviour
         countsGame.startCountWaterPoint =30;
         countsGame.startCountBottles =2;
         countsGame.startCountBonus =2;
+        countsGame.startÑactusDamagePoint = 20;
+        countsGame.gameMode = "Ñåğåäí³é";
     }
 
     public void HardMode()
@@ -27,5 +31,7 @@ public class ModesCount : MonoBehaviour
         countsGame.startCountWaterPoint =25;
         countsGame.startCountBottles =1;
         countsGame.startCountBonus =1;
+        countsGame.startÑactusDamagePoint = 10;
+        countsGame.gameMode = "Ñêëàäíèé";
     }
 }

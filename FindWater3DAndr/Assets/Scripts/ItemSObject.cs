@@ -22,8 +22,10 @@ public class ItemSObject : ScriptableObject
     [Header("ModeCounts")]
     public float startCountHealthPoint;
     public float startCountWaterPoint;
+    public float start—actusDamagePoint;
 
     public int startCountBottles;
     public int startCountBonus;
 
+    public string gameMode;
 }

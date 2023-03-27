@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private StatsPlayer _statsPlayer;
+    [SerializeField] private DayCycleManager _dayCycleManager;
 
     public float waterStartCount;
     private float waterCurrentCount;
@@ -28,7 +29,14 @@ public class Timer : MonoBehaviour
     {
         if(waterCurrentCount > 0)
         {
-            waterCurrentCount -= Time.deltaTime;
+            if (_dayCycleManager.TimeOfDay >= 0.5)
+            {
+                waterCurrentCount -= Time.deltaTime / 2;
+            }
+            else
+            {
+                waterCurrentCount -= Time.deltaTime;
+            }
 
             sliderWater.value = waterCurrentCount;
         }

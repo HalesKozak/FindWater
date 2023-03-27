@@ -66,15 +66,22 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    _statsPlayer.heathPoint += itemScript.item.healthCount;
+                    if ((_statsPlayer.heathPoint += itemScript.item.healthCount) >= _statsPlayer.maxHeathPoint)
+                    {
+                        _statsPlayer.heathPoint = _statsPlayer.maxHeathPoint;
+                    }
+                    else
+                    {
+                        _statsPlayer.heathPoint += itemScript.item.healthCount;
+                    }
                 }
-
                 _statsProgressGame.bonusPickUpCount += 1;
 
                 pickUpBonusAS.Play();
             }
             particlesPlayer[itemScript.item.indexParticlePlayer].Play();
             _spawnPrefab.SpawnObj(itemScript.item.indexPrefab);
+
             Destroy(other.gameObject);
         }
         else
@@ -82,7 +89,6 @@ public class PlayerController : MonoBehaviour
             _statsPlayer.TakeDamage(1);
         }
     }
-
 
     private void DeadPlayer()
     {
